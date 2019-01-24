@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Counter from './comp1/Counter'
+import SampleList from './comp1/SampleList'
+import RefOuter2 from "./comp3/RefOuter2";
+import TodoComponent from './comp4/TodoComponent'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <TodoComponent/>
+          <RefOuter2/>
+          <Counter amount={1}/>
+          <Counter amount={10}/>
+          <Counter amount={100}/>
+          <Counter amount={1000}/>
+          <SampleList/>
       </div>
+
     );
   }
 }
